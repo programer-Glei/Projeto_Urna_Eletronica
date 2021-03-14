@@ -14,32 +14,70 @@ body {
 
 .urna{
     background: #dbd5c9;
-    padding: 30px;
     display: flex;
+    padding: 10px 30px 35px 40px;
 }
 
 .tela{
+    border: 2px solid #000;
     width: 800px;
     height: 420px;
+    margin: 40px 10px;
     background: linear-gradient(to right, #e8e8e8, #c1c1c1);
 }
 
-.teclado{
-    margin-left: 30px;
-    background: #403a3a;
-    color: white;
+.lado-direito{
+    width: 360px;
+    margin-left: 50px;
+    overflow: hidden;
 }
 
+.lado-direito header{
+    margin-bottom: 5px;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    background-color: rgba(248, 248, 248);
+}
+
+.lado-direito header div{
+    padding-top: 10px;
+}
+
+header p{
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    font: arial, helvetica, sans-serif;
+}
+
+header img{
+    width: 80px;
+    height: 80px;
+}
+
+.teclado{
+    background: #403a3a;
+    color: white;
+    /*padding: 23px 43px;*/
+    height: 100%;
+}
+
+.teclado-numeros{
+    padding: 23px 43px 0 43px;
+}
+
+/* define o lugar dos botoes em cada linha do teclado*/
 .botoes{
     display: grid;
     grid-template-areas: 
     "linha1 linha2 linha3" 
     "linha4 linha5 linha6" 
     "linha7 linha8 linha9" 
-    "linha10 linha10 linha10" 
-    "linha11 linha12 linha13";
+    "linha10 linha10 linha10";
 }
 
+/* define o tamanho dos botões e seu alinhamento interno*/
 .numeros{
     width: 70px;
     height: 40px;
@@ -50,8 +88,10 @@ body {
     background: #000;
     font-size: 25px;
     cursor: pointer;
+    box-shadow: 3px 3px 0px #555;
 }
 
+/* define o lugar de cada linha no grid-area*/
 .linha1{
     grid-area: linha1;
 }
@@ -85,19 +125,69 @@ body {
 }
 
 .linha10{
-    margin: 0 auto;
+    margin-left: 101px;
     grid-area: linha10;
 }
 
 .linha11{
     grid-area: linha11;
+    background-color:#fff;
+    color: #000;
+    font-size: 15px;
 }
 
 .linha12{
     grid-area: linha12;
+    background-color: #f09046;
+    color: #000;
+    font-size: 15px;
 }
 
 .linha13{
     grid-area: linha13;
+    background-color: #48c079;
+    color: #000;
+    font-size: 15px;
 }
 
+/* define o layout dos botoes de acçoes*/
+.teclado-acoes{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 25px;
+}
+
+.branco{
+    width: 200px;
+    height: 50px;
+    background-color:#fff;
+    color: #000;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #555;
+}
+
+.laranja{
+    width: 200px;
+    height: 50px;
+    background-color: #f09046;
+    color: #000;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #555;
+}
+
+.verde{
+    width: 200px;
+    height: 70px;
+    background-color: #48c079;
+    color: #000;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #555;
+}
