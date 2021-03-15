@@ -20,8 +20,8 @@
                         <span>VEREADOR</span>
                     </div>
                     <div class="d-1-3">
-                        <div class="numero pisca">3</div>
-                        <div class="numero">5</div>
+                        <div class="numero pisca"></div>
+                        <div class="numero"></div>
                     </div>
                     <div class="d-1-4">
                        <p>Nome: FULANO DE TAL</p>
@@ -54,26 +54,27 @@
             <div class="teclado">
                 <div class="teclado-numeros">
                     <div class="botoes">
-                        <div class="numeros linha1">1</div>
-                        <div class="numeros linha2">2</div>
-                        <div class="numeros linha3">3</div>
-                        <div class="numeros linha4">4</div>
-                        <div class="numeros linha5">5</div>
-                        <div class="numeros linha6">6</div>
-                        <div class="numeros linha7">7</div>
-                        <div class="numeros linha8">8</div>
-                        <div class="numeros linha9">9</div>
-                        <div class="numeros linha10">0</div>
+                        <div class="numeros linha1" onclick="clicou('1')">1</div>
+                        <div class="numeros linha2" onclick="clicou('2')">2</div>
+                        <div class="numeros linha3" onclick="clicou('3')">3</div>
+                        <div class="numeros linha4" onclick="clicou('4')">4</div>
+                        <div class="numeros linha5" onclick="clicou('5')">5</div>
+                        <div class="numeros linha6" onclick="clicou('6')">6</div>
+                        <div class="numeros linha7" onclick="clicou('7')">7</div>
+                        <div class="numeros linha8" onclick="clicou('8')">8</div>
+                        <div class="numeros linha9" onclick="clicou('9')">9</div>
+                        <div class="numeros linha10" onclick="clicou('0')">0</div>
                     </div>
                 </div>
                 <div class="teclado-acoes">
-                    <div class="branco">BRANCO</div>
-                    <div class="laranja">CORRIGE</div>
-                    <div class="verde">CONFIRMAR</div>
+                    <div class="branco" onclick="branco()">BRANCO</div>
+                    <div class="laranja" onclick="corrige()">CORRIGE</div>
+                    <div class="verde" onclick="confirma()">CONFIRMAR</div>
                 </div>
             </div>
         </div>
     </div>
     <script src="javascript/etapas.js"></script>
+    <script src="javascript/logica.js"></script>
 </body>
 </html>
