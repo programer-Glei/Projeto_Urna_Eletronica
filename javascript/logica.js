@@ -31,7 +31,12 @@ function comecarEtapa(){
 }
 
 function atualizaInterface(){
-    let 
+    let etapa = etapas[etapaAtual];
+    let candidadto = etapa.candidatos.filter((item)=>{
+        if(item.numero === numero){
+            console.log("achei")
+        }
+    })
 }
 
 function clicou(n){
