@@ -8,12 +8,14 @@ let numeros = document.querySelector('.d-1-3');
 
 let etapaAtual = 0;
 let numero = "";
+let Btnbranco = false;
 
 function comecarEtapa(){
     let etapa = etapas[etapaAtual];
 
     let numeroHtml = "";
     numero = "";
+    Btnbranco = false;
 
     for(let i=0; i<etapa.numeros;i++){
         if(i === 0){
@@ -78,11 +80,39 @@ function clicou(n){
 }
 
 function branco(){
-
+    numero = ""
+    Btnbranco = true;
+    seuVotoPara.style.display = 'block';
+    lateral.innerHTML = "";
+    aviso.style.display = 'block';
+    numeros.innerHTML = '';
+    descricao.innerHTML = '<div class="aviso-grande pisca">VOTO EM BRANCO</div>';
 }
 
 function corrige(){
     comecarEtapa();
+}
+
+function confirmar(){
+    let etapa = etapas[etapaAtual];
+
+    let votoConfirmado = false;
+
+    if(Btnbranco === true){
+        votoConfirmado = true;
+    }else if(numero.length === etapa.numeros){
+        votoConfirmado = true;
+    }
+
+    if(votoConfirmado){
+        etapaAtual++;
+        if(etapas[etapaAtual] !== undefined){
+            comecarEtapa();
+        }else{
+            document.querySelector('.tela').innerHTML = '<div class="aviso-gigante pisca">FIM</div>';
+
+        }
+    }
 }
 
 comecarEtapa();
