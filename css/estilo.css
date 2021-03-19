@@ -275,3 +275,9 @@ header img{
     cursor: pointer;
     box-shadow: 3px 3px 0px #555;
 }
+
+.aviso-grande{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
